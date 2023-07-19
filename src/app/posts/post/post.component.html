@@ -1,0 +1,9 @@
+<div
+  id="post"
+  class="bg-gray-200 rounded p-1 aspect-square overflow-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+  (click)="displayNextProperty()"
+  (keypress)="displayNextProperty()"
+  [tabindex]="post.id"
+>
+  {{ displayValues[displayIndex] }}
+</div>

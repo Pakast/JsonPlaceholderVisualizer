@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+import { PostsComponent } from './posts/posts.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PostsComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-  title = 'JSONPlaceholderVisualizer';
-}
+export class AppComponent {}

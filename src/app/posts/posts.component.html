@@ -1,0 +1,23 @@
+<ng-container
+  *ngIf="{ posts: posts$ | async, error: error$ | async } as observables"
+>
+  <div
+    id="loading"
+    *ngIf="!observables.error && !observables.posts"
+    class="bg-gray-500 m-2 p-2 text-white rounded"
+  >
+    Loading data...
+  </div>
+
+  <div
+    id="error"
+    *ngIf="observables.error"
+    class="bg-red-500 m-2 p-2 text-white rounded"
+  >
+    Error while loading data. Reload the page to retry.
+  </div>
+
+  <div class="grid grid-cols-10 gap-2 m-2">
+    <app-post *ngFor="let post of observables.posts" [post]="post"></app-post>
+  </div>
+</ng-container>
