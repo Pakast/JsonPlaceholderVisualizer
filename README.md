@@ -20,7 +20,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## TODO
 
-- Create unit tests for PostsComponent
 - Create unit tests for PostsService
 - Improve styling
 - Responsive design for smaller screens
